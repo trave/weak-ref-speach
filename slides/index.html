@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JavaScript WeakRef</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css">
+    <style>
+        .shower {
+            --slide-ratio: calc(16 / 9);
+        }
+        dl {
+            display: grid;
+            grid-auto-flow: column;
+            grid-auto-columns: 1fr;
+            grid-template-rows: repeat(50, min-content);
+            font-size: 0.5em;
+        }
+        dt {
+            grid-row-start: 1;
+        }
+        dd {
+            margin: 0;
+        }
+        dl img {
+            width: 90px;
+        }
+
+        .fav {
+            position: relative;
+        }
+        .fav:after {
+            content: '❤';
+            margin: 0;
+            padding: 0;
+            color: hotpink;
+            z-index: 1;
+            position: absolute;
+            bottom: 0;
+            left: 70px;
+            font-size: 40px;
+            line-height: 40px;
+            display: block;
+            height: 28px;
+        }
+    </style>
+</head>
+<body class="shower list">
+
+    <header class="caption">
+        <h1>JavaScript WeakRef</h1>
+    </header>
+
+    <section class="slide" id="cover">
+        <h2>JavaScript WeakRef</h2>
+    </section>
+
+    <section class="slide">
+        <h2>App flow</h2>
+        <img src="pictures/simple.png" alt="Simple App Flow">
+    </section>
+
+    <section class="slide">
+        Recent
+        <dl>
+            <dt><img src="pictures/a-taste-of-joy.jpg"></dt>
+            <dd>A Taste of Joy</dd>
+            <dt><img src="pictures/last-tango.jpg"></dt>
+            <dd>Last Tango</dd>
+            <dt><img src="pictures/the-good-girl.jpg"></dt>
+            <dd>The Good Girl</dd>
+            <dt><img src="pictures/pirates.jpg"></dt>
+            <dd>Pirates</dd>
+        </dl>
+    </section>
+
+    <section class="slide">
+        <h2>App flow</h2>
+        <img src="pictures/complex.png" alt="Complex App Flow">
+    </section>
+
+    <section class="slide">
+        Recent
+        <dl>
+            <dt><img src="pictures/a-taste-of-joy.jpg"></dt>
+            <dd>A Taste of Joy</dd>
+            <dt><img src="pictures/last-tango.jpg"></dt>
+            <dd>Last Tango</dd>
+            <dt><img src="pictures/the-good-girl.jpg"></dt>
+            <dd>The Good Girl</dd>
+            <dt><img src="pictures/pirates.jpg"></dt>
+            <dd>Pirates</dd>
+        </dl>
+        Most viewed
+        <dl>
+            <dt><img src="pictures/chemistry.jpg"></dt>
+            <dd>Chemistry</dd>
+            <dt><img src="pictures/behind-the-green-door.jpg"></dt>
+            <dd>Behind the Green Door</dd>
+            <dt><img src="pictures/portrait-of-a-call-girl.jpg"></dt>
+            <dd>Portrait of a Call Girl</dd>
+            <dt><img src="pictures/two-girls.jpg"></dt>
+            <dd>Two girls one mug</dd>
+        </dl>
+    </section>
+
+    <section class="slide">
+        <h2>App flow</h2>
+        <img src="pictures/real.png" alt="Real App Flow">
+    </section>
+
+    <section class="slide">
+        Recent
+        <dl>
+            <dt><img src="pictures/a-taste-of-joy.jpg"></dt>
+            <dd>A Taste of Joy</dd>
+            <dt><img src="pictures/last-tango.jpg"></dt>
+            <dd>Last Tango</dd>
+            <dt><img src="pictures/the-good-girl.jpg"></dt>
+            <dd>The Good Girl</dd>
+            <dt><img src="pictures/pirates.jpg"></dt>
+            <dd>Pirates</dd>
+        </dl>
+        Most viewed
+        <dl>
+            <dt><img src="pictures/pirates.jpg"></dt>
+            <dd>Pirates</dd>
+            <dt><img src="pictures/chemistry.jpg"></dt>
+            <dd>Chemistry</dd>
+            <dt><img src="pictures/behind-the-green-door.jpg"></dt>
+            <dd>Behind the Green Door</dd>
+            <dt><img src="pictures/portrait-of-a-call-girl.jpg"></dt>
+            <dd>Portrait of a Call Girl</dd>
+        </dl>
+        <style>
+        </style>
+    </section>
+
+    <section class="slide">
+        Recent
+        <dl>
+            <dt><img src="pictures/a-taste-of-joy.jpg"></dt>
+            <dd>A Taste of Joy</dd>
+            <dt><img src="pictures/last-tango.jpg"></dt>
+            <dd>Last Tango</dd>
+            <dt><img src="pictures/the-good-girl.jpg"></dt>
+            <dd>The Good Girl</dd>
+            <dt><img src="pictures/pirates.jpg"></dt>
+            <dd>Pirates</dd>
+        </dl>
+        Most viewed
+        <dl>
+            <dt class="fav"><img src="pictures/pirates.jpg"></dt>
+            <dd>Pirates</dd>
+            <dt><img src="pictures/chemistry.jpg"></dt>
+            <dd>Chemistry</dd>
+            <dt><img src="pictures/behind-the-green-door.jpg"></dt>
+            <dd>Behind the Green Door</dd>
+            <dt><img src="pictures/portrait-of-a-call-girl.jpg"></dt>
+            <dd>Portrait of a Call Girl</dd>
+        </dl>
+        <style>
+        </style>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout shrink">Code</h2>
+    </section>
+
+    <section class="slide" id="see-more">
+        <ul>
+            <li><a href="https://github.com/tc39/proposal-weakrefs">https://github.com/tc39/proposal-weakrefs</a></li>
+            <li>Chrome Canary <mark>--js-flags="--harmony-weak-refs --expose-gc"</mark></li>
+        </ul>
+    </section>
+
+    <div class="progress"></div>
+
+    <script src="shower/shower.min.js"></script>
+</body>
+</html>

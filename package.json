@@ -1,0 +1,10 @@
+{
+  "name": "weak-refs-demo",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node backend/api.js"
+  },
+  "dependencies": {
+    "chrome-launcher": "^0.10.5"
+  }
+}

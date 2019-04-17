@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Dynamic Model Sync Demo</title>
+	<script type="module" src="app.js"></script>
+	<style>
+		.component {
+			border: 1px solid black;
+			margin: 10px;
+			padding: 10px;
+			display: inline-block;
+			min-width: 250px;
+		}
+	</style>
+</head>
+<body>
+	<div class="component">
+		Title: <span class="title"></span><br>
+		ID: <input class="input" value="42"><br>
+		Value: <span class="value"></span><br>
+		<button class="refresh">Refresh</button>
+	</div>
+	<div class="component">
+		Title: <span class="title"></span><br>
+		ID: <input class="input" value="73"><br>
+		Value: <span class="value"></span><br>
+		<button class="refresh">Refresh</button>
+	</div>
+</body>
+</html>
